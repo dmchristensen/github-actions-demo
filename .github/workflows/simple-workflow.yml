@@ -38,6 +38,7 @@ jobs:
       # Run a windows specific command
       - name: Run another command
         run: hostname
+	
       # Create a file that will be uploaded
       - name: Create a file
         run: time /t > time.txt
@@ -46,5 +47,4 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           name: time-artifact.txt
-          path: time.txt
-				
+          path: time.txt		
