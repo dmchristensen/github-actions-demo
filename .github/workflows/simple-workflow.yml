@@ -38,11 +38,13 @@ jobs:
       # Run a windows specific command
       - name: Run another command
         run: hostname
+        
       # Create a file that will be uploaded
       - name: Create a file
-        run: time /t > time.txt
+        run: Get-Date > datetime.txt
+        
       # Upload the text document
       - uses: actions/upload-artifact@v3
         with:
-          name: time-artifact.txt
-          path: time.txt
+          name: datetime-artifact.txt
+          path: datetime.txt
